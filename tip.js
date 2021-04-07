@@ -1,12 +1,23 @@
-function calculatetip(){
-    var bilAmt=
-    document.getElementById("billamount").value;
-    var service=
-    document.getElementById("serviceQuali").value;
-    var numberOfPeople=
-    document.getElementById("peopleamt").value;
-}
+function calculateTip(){
+    var billAmt = document.getElementById("billamount").value;
+    var service = document.getElementById("serviceQuali").value;
+    var peopleamt = document.getElementById("peopleamt").value;
 
-if(bilAmt == " " || service == 0) {
-    alert("Please enter values")
+    if (billAmt === "" || service == 0){
+        alert("Please enter values");
+        return;
+    }
+    if (peopleamt ==="" || peopleamt <= 1){
+        document.getElementById("each").style.display = "none";
+    } else {
+        document.getElementById("each").style.display = "block";
+    }
+
+    var total = (billAmt * service) / peopleamt;
+    total = Math.round(total*100)/ 100;
+    total = total.toFixed(2);
+    document.getElementById("totalTip").style.display = "block";
+    document.getElementById("tip").innerHTML = total;
 }
+document.getElementById("totalTip").style.display = "none";
+document.getElementById("each").style.display = "none";
