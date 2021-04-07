@@ -41,6 +41,8 @@ input[type="text"]{
 }
 
 button{
+    border: none;
+    margin: 20px 75px;
     font-size: 17px;
     border-radius: 20px;
     display: block;
@@ -53,4 +55,15 @@ button{
 button:hover{
     background-color: blue;
     border-bottom-color: #111;
+}
+
+#totaltip{
+    font-size: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+#totaltip::before{
+    content: "Tip Amount";
+    display: block;
+    text-transform: uppercase;
 }
