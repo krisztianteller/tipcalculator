@@ -1,5 +1,5 @@
 # tipcalculator
-Litte project with html/css/javasript
+Little project with html/css/javasript
 
 Live preview url:
 
